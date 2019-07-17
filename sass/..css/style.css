@@ -1,0 +1,55 @@
+body {
+  position: relative;
+}
+
+img {
+  border-radius: 50%;
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card {
+  border-top: 1px solid #64646466;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.4);
+  box-shadow: 0 1 5 rgba 100, 100, 100, 0.4;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
