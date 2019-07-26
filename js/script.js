@@ -15,6 +15,8 @@ fetch(apiUrl)
   .then(res => res.json())
   .then(res => res.results)
   .then(displayEmployees)
+  .catch(err => console.log(err))
+  
 
 
   function displayEmployees(employeeData) {
