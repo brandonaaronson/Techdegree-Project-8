@@ -3,7 +3,7 @@
 
 let employees = [];
 const apiUrl = 'https://randomuser.me/api/?results=12&inc=name,picture,email,location,phone,dob&noinfo&nat=US';
-const container = document.querySelector('.container');
+const container = document.querySelector('.grid-container');
 const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-content');
 const modalClose = document.querySelector('.modal-close');
@@ -52,7 +52,7 @@ function displayModal(index) {
 
   const modalHTML = `
   <img class="avatar" src="${picture.large}" alt=""/>
-  <div class="user-info">
+  <div class="modal-info">
     <h2 class="name"> ${name.first} ${name.last}</h2>
     <p class="email">${email}</p>
     <p class="address">${city}</p>
@@ -68,6 +68,8 @@ function displayModal(index) {
   modalContainer.innerHTML = modalHTML;
 }
 
+
+
 // event listener for opening the modal //
 
 container.addEventListener('click', e => {
@@ -82,6 +84,14 @@ container.addEventListener('click', e => {
 
 // event listener for closing the modal //
 
-modalClose.addEventListener('click', () => {
-  overlay.classList.add("hidden");
+document.addEventListener('click', (e) => {
+  if (e.target.className == 'overlay' || e.target.className == 'modal-close') {
+    overlay.classList.add('hidden');
+  }
+});
+
+document.addEventListener('keydown', (e) =>{
+  if (e.key === "Escape") {
+    overlay.classList.add('hidden')
+  }
 });

@@ -1,7 +1,33 @@
 .card { 
-  border-top: 1px solid #64646466;
-  border-bottom: 1px solid rgba(100, 100, 100, .4);
-  box-shadow: 0 1 5 (rgba 100, 100, 100, .4);
+  display: flex;
+  max-width: 360px;
+  border-top: 1px solid $primary-border-color;
   padding: 20px 0;
-  margin-bottom: 30px;
+  background-color: #ffffff;
+  line-height: 10px;
+  
+
+  & img {
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+  }
+
+  @include mq('sm') {
+    border: 1px solid $primary-border-color;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}
+
+.user-info {
+  margin: 10px auto 0 20px;
+  font-size: 12px;
+  vertical-align: middle;
+  text-transform: capitalize;
+  text-align: left;
+  & p:last-of-type {
+    margin-bottom: 0;
+  }
 }

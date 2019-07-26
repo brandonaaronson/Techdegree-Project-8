@@ -4,18 +4,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(100, 100, 100, .4)
+  background: rgba(0,0,0, .8);
+  min-height: 100%;
 }
 
 .modal {
-  width: 375px;
-  margin: 15% auto auto;
-  position: relative;
+  width: 220px;
+  position: fixed;
   text-align: center;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff;
   border: 1px solid #778;
   border-radius: 5px;
   padding: 30px 20px;
+  
+  @include mq('med') {
+    width: 400px;
+    right: 35.555%;
+  }
 }
 
 .modal-close {
@@ -23,8 +31,19 @@
   right: 15px;
   top: 5px;
   cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-content {
+  text-align: center;
+  text-transform: capitalize;
+
+  
 }
 
 .hidden {
   display: none;
+  opacity: 100%;
+  transition: opacity .2s;
 }

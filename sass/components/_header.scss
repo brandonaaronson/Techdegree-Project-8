@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  & h1 {
+    font-size: 19px;
+    margin: 0 15px 20px;
+    color: rgb(95, 95, 95);
+    margin-left: 0;
+  }
+
+  @include mq('med') {
+    justify-content: left;
+    padding-top: 30px;
+
+    text-align: left;
+    font-size: 18px;
+  }
+}

@@ -1,6 +1,43 @@
+
 .container {
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include mq('med') {
+    max-width: 710px;
+  }
+
+  @include mq('lg') {
+    max-width: 1080px;
+  }
+}
+
+.grid-container {
+  display: block;
+  justify-content: center;
+  max-width: 1000px;
+   
+  @include mq('sm') {
+    display: grid;
+    grid-template-columns: 360px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    margin: 0 auto;
+  }
+
+  @include mq('med') {
+    grid-template-columns: repeat(2, 340px);
+  }
+
+  @include mq('lg') {
+    grid-template-columns: repeat(3, 340px);
+  }
  }
  
+ footer {
+   display: none;
+   height: 30px;
+   width: 50px;
+   margin: 0;
+ }
